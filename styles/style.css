@@ -3,5 +3,38 @@
   padding: 0;
   -webkit-box-sizing: 0;
           box-sizing: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+header .first {
+  height: auto;
+  background-color: #233A95;
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+}
+
+header .second {
+  height: 40px;
+  width: 62%;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 1px 1px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 1px 1px;
+  padding: 0 19%;
+  line-height: 40px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+header .second .left {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: red;
+}
+
+header .second .left span {
+  margin-right: 15px;
 }
 /*# sourceMappingURL=style.css.map */
