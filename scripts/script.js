@@ -37,10 +37,10 @@ $('.single-item').slick({
   autoplaySpeed: 1000,
 });
 
-var countDownDate = new Date("April 24, 2022 15:37:25").getTime();
+var countDownDate = new Date("May 17, 2022 15:37:25").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+var x = setInterval(function () {
 
   // Get today's date and time
   var now = new Date().getTime();
@@ -63,40 +63,86 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+
 $('.slider_products11').slick({
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 300,
   slidesToShow: 5,
   slidesToScroll: 1,
   dots: false,
-  responsive: [
-    {
+  responsive: [{
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
       }
-    }
+    },
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
   ]
 });
 
+document.getElementsByClassName("open-mobile-left")[0].addEventListener("click", () => {
+  document.getElementsByClassName("left-menu")[0].style.visibility = "visible";
+  let left_menu = document.getElementsByClassName("left-menu")[0].style.width = "100%";
+});
+
+
+document.getElementById("close-mobile-left").addEventListener("click", () => {
+  document.getElementsByClassName("left-menu")[0].style.width = "0";
+  document.getElementsByClassName("left-menu")[0].style.visibility = "hidden";
+});
+
+
+
+
+document.getElementById("mobile-myBtn").addEventListener("click", () => {
+  document.getElementsByClassName("mobile-modal-content")[0].style.display = "block";
+  document.getElementsByClassName("modal-bcg")[0].style.display = "block";
+});
+
+document.getElementById("close-mobile-modal-btn").addEventListener("click", () => {
+  document.getElementsByClassName("mobile-modal-content")[0].style.display = "none";
+  document.getElementsByClassName("modal-bcg")[0].style.display = "none";
+});
+
+
+window.onclick = function(event) {
+  if (event.target == document.getElementsByClassName("modal-bcg")[0]) {
+    modal.style.display = "none";
+    document.getElementsByClassName("mobile-modal-content")[0].style.display = "none";
+    document.getElementsByClassName("modal-bcg")[0].style.display = "none";
+  }
+}
+
+
+// document.getElementsByClassName("mobile-category-btn")[0].addEventListener("click", () => {
+//   document.getElementsByClassName("mobile-categories")[0].style.maxHeight = "0px";
+
+// });
+
+$(document).ready(function () {
+  $(".mobile-category-btn").click(function () {
+    $(".mobile-categories").slideToggle("fast")
+  });
+});
+
+$(document).ready(function () {
+  $(".mobile-fruits").click(function () {
+    $("#lol").slideToggle("fast")
+  });
+});
+
+$(document).ready(function () {
+  $(".mobile-home").click(function () {
+    $(".mobile-homes").slideToggle("fast")
+  });
+});
+
+$(window).on('resize orientationchange', function() {
+  $('.carousel').slick('resize');
+});
