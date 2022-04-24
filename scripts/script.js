@@ -99,3 +99,4 @@ $('.slider_products11').slick({
     // instead of a settings object
   ]
 });
+

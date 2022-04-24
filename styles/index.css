@@ -14,6 +14,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   min-width: 1600px;
   /* Modal Content/Box */
@@ -1646,5 +1650,301 @@ header .close:focus {
 
 .tips .tip .p2 {
   margin-top: 10px;
+}
+
+footer {
+  height: 1300px;
+}
+
+footer .copyright {
+  width: 1230px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+footer .copyright a {
+  color: black;
+}
+
+footer .copyright div {
+  width: 50%;
+}
+
+footer .copyright .right {
+  text-align: left;
+}
+
+footer .number {
+  width: 1230px;
+  margin: auto;
+  margin-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.174);
+}
+
+footer .number .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .number .right i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+footer .number .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .number .left i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+}
+
+footer .number .left p {
+  color: rgba(0, 0, 0, 0.427);
+  font-size: 13px;
+}
+
+footer .headings {
+  width: 1230px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+}
+
+footer .headings div {
+  text-align: center;
+}
+
+footer .headings div ul {
+  margin-top: 20px;
+}
+
+footer .headings div ul li {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 13px;
+}
+
+footer .headings div ul li a {
+  color: rgba(0, 0, 0, 0.392);
+}
+
+footer .delivery {
+  width: 1230px;
+  height: 100px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.129);
+}
+
+footer .delivery div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.129);
+}
+
+footer .delivery div i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+footer .delivery div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container {
+  width: 100%;
+  background-color: #233A95;
+  height: 350px;
+  margin-top: 50px;
+}
+
+footer .container .newspaper {
+  height: 100%;
+  width: 1230px;
+  margin: auto;
+  color: white;
+}
+
+footer .container .newspaper .p1 {
+  padding-top: 50px;
+  display: block;
+}
+
+footer .container .newspaper h1 {
+  margin-top: 20px;
+}
+
+footer .container .newspaper .p2 {
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.461);
+}
+
+footer .container .newspaper div {
+  margin-top: 30px;
+  width: 450px;
+  height: 60px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7px;
+}
+
+footer .container .newspaper div i {
+  color: rgba(128, 128, 128, 0.387);
+  display: block;
+  width: 10%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container .newspaper div input {
+  border: none;
+}
+
+footer .container .newspaper div .btn {
+  height: 80%;
+  width: 20%;
+  margin-right: 1%;
+  border-radius: 4px;
+  background-color: #233A95;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  header .first,
+  header .container,
+  header .second {
+    display: none;
+  }
+  .mobile-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mobile-header img {
+    display: block;
+    height: 50%;
+    width: auto;
+  }
+  .mobile-header .basket {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
 }
 /*# sourceMappingURL=index.css.map */
