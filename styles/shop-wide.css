@@ -908,14 +908,20 @@ header .right .close:focus {
   margin-left: 20px;
 }
 
-.left-img, mobile-left-img {
+.left-img,
+.mobile-left-img {
   width: 100%;
   margin-left: 2%;
   margin-top: 50px;
 }
 
-.left-img img, mobile-left-img img {
+.left-img img,
+.mobile-left-img img {
   width: 100%;
+}
+
+.mobile-left-img {
+  display: none;
 }
 
 .product-status,
@@ -1199,14 +1205,12 @@ header .right .close:focus {
   width: 90%;
   padding-inline: 5%;
   font-size: 11px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  display: none;
 }
 
 .mobile-top i {
@@ -1226,7 +1230,6 @@ header .right .close:focus {
   margin: auto;
   margin-top: 20px;
   z-index: -1;
-  display: none;
 }
 
 .mobile-pic img {
@@ -1311,10 +1314,11 @@ header .right .close:focus {
   visibility: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  height: 100%;
+  height: 100vh;
   overflow: scroll;
   background-color: white;
   overflow-x: hidden;
+  z-index: 32112412412;
   border-bottom: 1px solid rgba(0, 0, 0, 0.685);
 }
 
@@ -1709,14 +1713,15 @@ footer .container .newspaper div .btn {
 
 .mobile-header .left-menu {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background-color: white;
+  z-index: 4141242141;
 }
 
 .mobile-header .left-menu .mobile-home {
@@ -1994,7 +1999,7 @@ footer .container .newspaper div .btn {
 
 .mobile-bottom {
   position: fixed;
-  bottom: 0;
+  bottom: -5px;
   width: 99%;
   height: 70px;
   background-color: white;
@@ -2006,6 +2011,7 @@ footer .container .newspaper div .btn {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.185);
+  z-index: 421421412421412241242141242412;
 }
 
 .mobile-bottom div {
@@ -2108,6 +2114,59 @@ footer .container .newspaper div .btn {
   }
   footer .copyright {
     width: 100%;
+  }
+  .middle {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .middle .left {
+    display: none;
+  }
+  .middle .right {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .middle .right .top-menu {
+    display: none;
+  }
+  .middle .right .prodducts {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .middle .right .prodducts .right-pp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    margin-bottom: 20px;
+  }
+  .middle .right .prodducts .right-pp .img {
+    width: 100%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    text-align: center;
+  }
+  .middle .right .prodducts .right-pp .img .add {
+    display: block;
+    position: relative;
+    padding: 0;
+    top: unset;
+    margin-top: 20px;
+  }
+  .middle .right .prodducts .right-pp .img img {
+    width: 100%;
+    margin-top: 50px;
   }
 }
 /*# sourceMappingURL=shop-wide.css.map */

@@ -777,7 +777,8 @@ header {
     }
 }
 
-.left-img, mobile-left-img{
+.left-img,
+.mobile-left-img {
     width: 100%;
     margin-left: 2%;
     margin-top: 50px;
@@ -785,6 +786,10 @@ header {
     img {
         width: 100%;
     }
+}
+
+.mobile-left-img {
+    display: none;
 }
 
 .product-status,
@@ -1034,10 +1039,10 @@ header {
         font-size: 9px;
     }
 
-    display: flex;
     align-items: center;
     flex-wrap: wrap;
 
+    display: none;
     p {
         width: 100%;
     }
@@ -1050,7 +1055,6 @@ header {
     margin: auto;
     margin-top: 20px;
     z-index: -1;
-    display: none;
 
     img {
         width: 100%;
@@ -1125,10 +1129,12 @@ header {
     width: 0;
     visibility: hidden;
     transition: 0.5s;
-    height: 100%;
+    height: 100vh;
     overflow: scroll;
     background-color: white;
     overflow-x: hidden;
+    z-index: 32112412412;
+
     .top {
         width: 90;
         display: flex;
@@ -1150,6 +1156,7 @@ header {
         }
 
     }
+
     border-bottom: 1px solid rgba(0, 0, 0, 0.685);
 }
 
@@ -1211,6 +1218,7 @@ header {
 .mobile-product-status,
 .mobile-brands {
     margin-top: 50px;
+
     h4 {
         margin-bottom: 10px;
     }
@@ -1425,6 +1433,7 @@ footer {
     text-align: center;
     background-color: white !important;
     z-index: 999999999999999999999999999999999999;
+    // position: fixed;
 
     i,
     img {
@@ -1440,13 +1449,14 @@ footer {
 
     .left-menu {
         width: 100%;
-        height: 100%;
-        position: absolute;
+        height: 100vh;
+        position: fixed;
         top: 0;
         left: 0;
         visibility: hidden;
         transition: all 0.3s;
         background-color: white;
+        z-index: 4141242141;
 
         .mobile-home {
             width: 90%;
@@ -1708,7 +1718,7 @@ footer {
 
 .mobile-bottom {
     position: fixed;
-    bottom: 0;
+    bottom: -5px;
     width: 99%;
     height: 70px;
     background-color: white;
@@ -1716,6 +1726,7 @@ footer {
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.185);
+    z-index: 421421412421412241242141242412;
 
     div {
         width: 20%;
@@ -1760,6 +1771,8 @@ footer {
         height: max-content;
         overflow-x: hidden;
     }
+
+
 
 
     footer {
@@ -1817,6 +1830,51 @@ footer {
 
         .copyright {
             width: 100%;
+        }
+    }
+
+    .middle {
+        .left {
+            display: none;
+        }
+
+        height: max-content;
+
+        .right {
+            height: max-content;
+
+            .top-menu {
+                display: none;
+            }
+
+            .prodducts {
+                width: 100%;
+                display: flex;
+                height: max-content;
+                .right-pp {
+                    display: flex;
+                    width: 50%;
+                    height: max-content;
+                    .img {
+                        width: 100%;
+                        .add {
+                            display: block;
+                            position: relative;
+                            padding: 0;
+                            top: unset;
+                            margin-top: 20px;
+                        }
+
+                        width: max-content;
+                        text-align: center;
+                        img {
+                            width: 100%;
+                            margin-top: 50px;
+                        }
+                    }
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
 }
