@@ -118,3 +118,14 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
+
+
+document.getElementsByClassName("filter")[0].addEventListener("click", () => {
+    document.getElementsByClassName("mobile-filter")[0].style.visibility = "visible";
+    document.getElementsByClassName("mobile-filter")[0].style.width = "100%";
+});
+
+document.getElementById("close-mobile-filter").addEventListener("click", () => {
+    document.getElementsByClassName("mobile-filter")[0].style.visibility = "hidden";
+    document.getElementsByClassName("mobile-filter")[0].style.width = "0";
+});
