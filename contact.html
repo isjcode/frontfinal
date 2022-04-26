@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bacola - Grocery Market </title>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.png">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <p class="first"> Due to the <b> COVID 19 </b> epidemic, orders may be processed with a slight delay </p>
+        <div class="container container1"></div>
+        <div class="second">
+            <div class="left">
+                <span> About Us </span>
+                <span> My Account </span>
+                <span> Wishlist </span>
+                <span> Order Tracking </span>
+            </div>
+            <div class="right">
+                <div class="courier">
+                    <i class="fa-regular fa-hand"></i>
+                    100% Secure delivery without contacting the courier
+                </div>
+                <div class="number">
+                    Need help? Call Us: <span>+ 0020 500</span>
+                </div>
+                <div class="drop-tab">
+                    English
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="options">
+                        <input type="button" value="English">
+                        <input type="button" value="Spanish">
+                        <input type="button" value="German">
+                    </div>
+                </div>
+                <div class="drop-tab">
+                    USD
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="options">
+                        <input type="button" value="USD">
+                        <input type="button" value="INR">
+                        <input type="button" value="GBP">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container container2">
+            <div class="header_third">
+                <div id="logo">
+                    <img src="imgs/logo.png">
+                </div>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn" class="myBtn"> <i class="fa-solid fa-chevron-down"></i>
+                    <p class="p1"> Your Location </p>
+                    <p class="p2"> Select A Location </p> </span>
+                </button>
+
+                <!-- The Modal -->
+
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h4> Choose your Delivery Location </h4>
+                        <p> Enter your address and we will specify the offer for your area. </p>
+                        <div class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Search your area" type="text">
+                        </div>
+                        <div class="places">
+                            <div class="place">
+                                Select A Location
+                            </div>
+                            <div class="place">
+                                Alabama
+                            </div>
+                            <div class="place">
+                                Alaska
+                            </div>
+                            <div class="place">
+                                Arizona
+                            </div>
+                            <div class="place">
+                                California
+                            </div>
+                            <div class="place">
+                                Colorado
+                            </div>
+                            <div class="place">
+                                Florida
+                            </div>
+                            <div class="place">
+                                Georgia
+                            </div>
+                            <div class="place">
+                                Kansas
+                            </div>
+                            <div class="place">
+                                Minnesota
+                            </div>
+                            <div class="place">
+                                New York
+                            </div>
+                            <div class="place">
+                                Washington
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search for products...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <i class="fa-solid fa-user"></i>
+                <p class="total"> $0.00 </p>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-basket-shopping basket"></i>
+                    <span class="product-quantity"> 0 </span>
+                </div>
+            </div>
+        </div>
+        <div class="container container3">
+            <div class="fourth">
+                <div class="categories">
+                    <div class="category-btn">
+                        <i class="fa-solid fa-bars"></i>
+                        <input type="button" id="dropBtn" value="ALL CATEGORIES">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="drop-categories">
+                        <div class="category fruits">
+                            <i class="fa-solid fa-apple-whole"></i>
+                            <p> Fruits & Vegetables <span> > </span></p>
+                            <div class="fruit-dropdown">
+                                <ul>
+                                    <li> Cuts & Sprouts </li>
+                                    <li> Exotic Fruits & Veggies </li>
+                                    <li> Fresh Fruits </li>
+                                    <li> Fresh Vegetables </li>
+                                    <li> Herbs & Seasonings</li>
+                                    <li> Packaged Prodduce </li>
+                                    <li> Party Trays </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="category">
+                            <i class="fa-solid fa-bacon"></i>
+                            <p> Meats & Seafood </p>
+                        </div>
+                        <div class="category">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <p> Breakfast & Dairy </p>
+                        </div>
+                        <div class="category beverages">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <p> Beverages <span>> </span> </p>
+                            <div class="beverage-dropdown">
+                                <ul>
+                                    <li> Coffee </li>
+                                    <li> Craft Beer </li>
+                                    <li> Drink Boxes & Pounches </li>
+                                    <li> Milk & Plant-Based Milk </li>
+                                    <li> Soda & Pop </li>
+                                    <li> Sparkling Water </li>
+                                    <li> Tea & Kombucha</li>
+                                    <li> Water & Wine </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="category">
+                            <i class="fa-solid fa-cookie"></i>
+                            <p> Breads & Bakery </p>
+                        </div>
+                        <div class="category">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <p> Fronzen Foods </p>
+                        </div>
+                        <div class="category">
+                            <i class="fa-solid fa-candy-cane"></i>
+                            <p> Biscuits & Snacks </p>
+                        </div>
+                        <div class="category">
+                            <i class="fa-solid fa-leaf"></i>
+                            <p> Grocery & Staples</p>
+                        </div>
+                        <hr>
+                        <p class="small-category category small1"> Value of the Day </p>
+                        <p class="small-category category"> Top 100 Offers </p>
+                        <p class="small-category category"> New Arrivals </p>
+                    </div>
+                </div>
+                <div class="drop-tab">
+                    HOME
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="home-drop">
+                        <ul>
+                            <li> Home 1 </li>
+                            <li> Home 2 </li>
+                            <li> Home 3 </li>
+                            <li> Home 4 </li>
+                            <li> Home 5 </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="drop-tab">
+                    SHOP
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="shop-drop">
+                        <div class="inside">
+                            <div class="box firstt">
+                                <ul>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                </ul>
+                            </div>
+                            <div class="box firstt">
+                                <ul>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                </ul>
+                            </div>
+                            <div class="box firstt">
+                                <ul>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                </ul>
+                            </div>
+                            <div class="box firstt">
+                                <ul>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                </ul>
+                            </div>
+                            <div class="box firstt">
+                                <ul>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                    <li> Lorem </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="drop-tab">
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                    MEATS & SEAFOOD
+                </div>
+                <div class="drop-tab">
+                    <i class="fa-solid fa-cookie"></i>
+                    BAKERY
+                </div>
+                <div class="drop-tab">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    BEVERAGES
+                </div>
+                <div class="drop-tab">
+                    BLOG
+                </div>
+                <div class="drop-tab">
+                    CONTACT
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="mobile-header">
+        <i class="fa-solid fa-bars open-mobile-left"></i>
+        <div>
+            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/bacola-logo-mobile.png">
+        </div>
+        <i class="fa-solid fa-basket-shopping basket"></i>
+
+        <div class="left-menu">
+            <div class="modal-bcg">
+
+            </div>
+            <div class="top">
+                <div class="left">
+                    <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/bacola-logo.png"
+                        alt="Bacola – Grocery Market and Food Theme">
+                </div>
+                <div class="right">
+                    <input id="close-mobile-left" type="button" value="X">
+                </div>
+            </div>
+            <button id="mobile-myBtn" class="mobile-myBtn">
+                <i class="fa-solid fa-chevron-down"></i>
+                <p class="p1"> Your Location </p>
+                <p class="p2"> Select A Location </p> </span>
+            </button>
+
+            <div class="mobile-modal-content">
+                <input id="close-mobile-modal-btn" value="X">
+                <h3> Choose Your Delivery Location</h3>
+                <p> Enter your address and we will specify the offer for your area </p>
+                <input type="text" placeholder="Search Your Area">
+
+                <div>
+                    <div>
+                        <p> Select a Location</p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                    <div>
+                        <p> Arizona </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-category-btn">
+                <i class="fa-solid fa-bars"></i>
+                <input type="button" id="dropBtn" value="ALL CATEGORIES">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="mobile-categories">
+                <div class="mobile-fruits cat mobile-drop"> <i class="fa-solid fa-apple-whole"></i> Fruits & Vegetables
+                    <span> >
+                    </span>
+                </div>
+                <ul id="lol" class="mobile-fruits-drop">
+                    <li> Lorem</li>
+                    <li> Lorem</li>
+                    <li> Lorem</li>
+                    <li> Lorem</li>
+                    <li> Lorem</li>
+                    <li> Lorem</li>
+                </ul>
+                <div class="mobile-drop"> <i class="fa-solid fa-apple-whole"></i> Beverages </div>
+                <div class="mobile-drop"> <i class="fa-solid fa-apple-whole"></i> Beverages </div>
+                <div class="mobile-drop"> <i class="fa-solid fa-apple-whole"></i> Beverages </div>
+                <div class="mobile-drop"> <i class="fa-solid fa-apple-whole"></i> Beverages </div>
+            </div>
+            <div class="mobile-home">
+                Home
+                <ul class="mobile-homes">
+                    <li> Home 1</li>
+                    <li> Home 2</li>
+                    <li> Home 3</li>
+                    <li> Home 4</li>
+                    <li> Home 5</li>
+                </ul>
+            </div>
+            <div class="mobile-shop">
+                Home
+                <ul class="mobile-shops">
+                    <li> Home 1</li>
+                    <li> Home 2</li>
+                    <li> Home 3</li>
+                    <li> Home 4</li>
+                    <li> Home 5</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="mobile-bottom">
+        <div>
+            <i class="fa-solid fa-house"></i>
+            <p> Home </p>
+        </div>
+        <div>
+            <i class="fa-solid fa-filter"></i>
+            <p> Filter </p>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p> Search </p>
+        </div>
+        <div>
+            <i class="fa-solid fa-heart"></i>
+            <p> Wishlist </p>
+        </div>
+        <div>
+            <i class="fa-solid fa-user"></i>
+            <p> Account </p>
+        </div>
+    </div>
+
+    <div class="main">
+        <p class="p1"> Get in Touch </p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores rem itaque beatae eos eaque expedita, iure
+            cupiditate assumenda reprehenderit qui!</p>
+        <div class="sects">
+            <div class="sect">
+                <div> <i class="fa-solid fa-location-pin"></i> </div>
+                <p> 102 Street 2714 Donovan </p>
+                <p> Lorem ipsum dolor sit amet. </p>
+            </div>
+            <div class="sect">
+                <div> <i class="fa-solid fa-phone"></i> </div>
+                <p> +02 1234 567 88 </p>
+                <p> Lorem ipsum dolor sit amet. </p>
+            </div>
+            <div class="sect">
+                <div> <i class="fa-solid fa-envelope"></i> </div>
+                <p> info@example.com </p>
+                <p> Lorem ipsum dolor sit amet. </p>
+            </div>
+        </div>
+
+        <div class="send">
+            <p class="p1"> Send Us </p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita ut libero voluptatibus iusto a
+                quisquam soluta hic, sed quasi dignissimos?</p>
+            <form id="form">
+                <div class="first">
+                    <div class="name">
+                        <p> Your Name * </p>
+                        <input required type="text">
+                    </div>
+                    <div class="email">
+                        <p> Your Email * </p>
+                        <input id="email" required type="text">
+                    </div>
+                </div>
+                <div class="second">
+                    <p> Subject * </p>
+                    <input required type="text">
+                </div>
+                <div class="third">
+                    <p> Your Message * </p>
+                    <input required type="text">
+                </div>
+                <p style="color: red; text-align: left; margin-bottom: 20px;"  id="output">
+
+                </p>
+                <div class="send-div">
+                    <input id="send-btn" type="submit" value="Send Message">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="newspaper">
+                <p class="p1"> $20 discount for your first order </p>
+                <h1> Join our newsletter and get... </h1>
+                <p class="p2"> Join our email subscription now to get updates on promotions and coupons. </p>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input placeholder="Your email address" class="txt" type="text">
+                    <input class="btn" type="button" value="Subscribe">
+                </div>
+            </div>
+        </div>
+        <div class="delivery">
+            <div>
+                <i class="fa-solid fa-building"></i>
+                <p> Everyday fresh products </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-truck"></i>
+                <p> Free delivery for order over $70 </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-percent"></i>
+                <p> Daily Mega Discounts </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-dollar-sign"></i>
+                <p> Best price on the market </p>
+            </div>
+        </div>
+
+        <div class="headings">
+            <div>
+                <strong>FRUIT & VEGETABLES</strong>
+                <ul>
+                    <li><a href="">Fresh Vegetables</a></li>
+                    <li><a href="">Herbs & Seasonings</a></li>
+                    <li><a href="">Fresh Fruits</a></li>
+                    <li><a href="">Cuts & Sprouts</a></li>
+                    <li><a href="">Exotic Fruits & Veggies</a></li>
+                    <li><a href="">Packaged Produce</a></li>
+                    <li><a href="">Party Trays</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong> Breakfast & Dairy </strong>
+                <ul>
+                    <li><a href="">Milk & Flavoured Milk</a></li>
+                    <li><a href="">Butter and Margarine</a></li>
+                    <li><a href="">Cheese</a></li>
+                    <li><a href="">Eggs Substitutes</a></li>
+                    <li><a href="">Honey</a></li>
+                    <li><a href="">Marmalades</a></li>
+                    <li><a href="">Sour Cream and Dips</a></li>
+                    <li><a href="">Yougrt</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong>MEAT & SEAFOOD</strong>
+                <ul>
+                    <li><a href="">Breakfast Sausage</a></li>
+                    <li><a href="">Dinner Sausage</a></li>
+                    <li><a href="">Beef</a></li>
+                    <li><a href="">Chicken</a></li>
+                    <li><a href="">Sliced Deli Meat</a></li>
+                    <li><a href="">Shrimp</a></li>
+                    <li><a href="">Wild Caught Fillets</a></li>
+                    <li><a href="">Crab and Shellfish</a></li>
+                    <li><a href="">Farm Raised Fillets</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong> BEVERAGES </strong>
+                <ul>
+                    <li><a href="">Water</a></li>
+                    <li><a href="">SparlingWater</a></li>
+                    <li><a href="">Soda & Pop</a></li>
+                    <li><a href="">Coffee</a></li>
+                    <li><a href="">Milk & Plant-Based Milk</a></li>
+                    <li><a href="">Tea & Kombucha</a></li>
+                    <li><a href="">Drink Boxes & Pouches</a></li>
+                    <li><a href="">Craft Beer</a></li>
+                    <li><a href="">Wine</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong> BREADS & BAKERY </strong>
+                <ul>
+                    <li><a href="">Milk & Flavoured Milk</a></li>
+                    <li><a href="">Butter and Margarine</a></li>
+                    <li><a href="">Cheese</a></li>
+                    <li><a href="">Eggs Substitutes</a></li>
+                    <li><a href="">Honey</a></li>
+                    <li><a href="">Marmalades</a></li>
+                    <li><a href="">Sour Cream and Dips</a></li>
+                    <li><a href="">Yougrt</a></li>
+                </ul>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="number">
+            <div class="left">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h3> 8 800 555-55 </h3>
+                    <p> Working 8:00 - 22:00 </p>
+                </div>
+            </div>
+            <div class="right">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="left">
+                <p class="p1"> Copyright 2022 © Bacola WordPress Theme. All rights reserved. Powered by KlbTheme. </p>
+            </div>
+            <div class="right">
+                <a href="#"> Privacy Policy </a>
+                <a href="#"> Terms and Conditions </a>
+                <a href="#"> Cookie </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="slick-1.8.1/slick/slick.js"></script>
+    <script src="scripts/contact_script.js"></script>
+</body>
+
+</html>
