@@ -37,8 +37,19 @@ a {
 
 }
 
+
 header {
     min-width: 1600px;
+
+
+    #logo {
+        cursor: pointer;
+    }
+    .cart-icon {
+        cursor: pointer;
+    }
+
+
     .first {
         height: auto;
         color: white;
@@ -2249,9 +2260,11 @@ footer {
             .newspaper {
                 width: 90%;
                 padding: 0 5%;
+
                 .p2 {
                     margin-bottom: 20px;
                 }
+
                 div {
                     margin: unset;
                     align-self: flex-start;
@@ -2263,6 +2276,7 @@ footer {
         .delivery {
             width: 96%;
             flex-wrap: wrap;
+
             div {
                 padding: 0 2%;
                 justify-content: flex-start;
@@ -2270,6 +2284,7 @@ footer {
                 align-self: flex-start;
                 margin: 5px 0;
             }
+
             margin: 20px 0;
         }
 
@@ -2277,11 +2292,13 @@ footer {
             width: 90%;
             flex-wrap: wrap;
             height: auto;
+
             div {
                 margin-top: 30px;
                 width: 100%;
                 text-align: left;
             }
+
             padding: 0 5%;
         }
 

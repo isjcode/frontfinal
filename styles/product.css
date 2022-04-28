@@ -28,6 +28,14 @@ header {
   /* The Close Button */
 }
 
+header #logo {
+  cursor: pointer;
+}
+
+header .cart-icon {
+  cursor: pointer;
+}
+
 header .first {
   background-color: red;
   height: auto;

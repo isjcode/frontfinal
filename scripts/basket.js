@@ -101,12 +101,13 @@ let add_items = () => {
             ${prod.price}
         </div>
         <div class="quantity">
-            <input id="decrease" type="button" value="-">
+            <input class="decrease" class="decrease" type="button" value="-">
             <p> ${prod.count} </p>
-            <input id="increase" type="button" value="+">
+            <input id="increase" class="increase" type="button" value="+">
         </div>
         <div class="subtotal">
-            ${subtotal}
+            ${subtotal.toFixed(2)}
+            <input class="delete-item" value="X" type="button">
         </div>
     </div>`;
 
@@ -118,19 +119,139 @@ let add_items = () => {
 }
 
 add_items();
+document.getElementsByClassName("product-quantity")[0].innerHTML = basket.length;
 
-document.getElementById("decrease").addEventListener("click", (e) => {
-    let basket = JSON.parse(localStorage.getItem("basket"));
-    let prod_id = e.target.parentElement.parentElement.getAttribute("data-id");
-    for (const prod of basket) {
-        if (prod_id == prod.id) {
+if (JSON.parse(localStorage.getItem("basket").length) > 0) {
+    for (const e of document.getElementsByClassName("decrease")) {
+        e.addEventListener("click", (e) => {
+            let basket = JSON.parse(localStorage.getItem("basket"));
+            let prod_id = e.target.parentElement.parentElement.getAttribute("data-id");
+            for (const prod of basket) {
+                if (prod_id == prod.id) {
+                    if (prod.count > 1) {
+                        prod.count--;
+                    }
+                    console.log(prod.count);
+                }
+            }
+
+            localStorage.setItem("basket", JSON.stringify(basket));
+            document.getElementsByClassName("main")[0].children[0].children[1].innerHTML = "";
+            location.reload();
+        });
+    }
+}
+if (JSON.parse(localStorage.getItem("basket").length) > 0) {
+    for (const e of document.getElementsByClassName("increase")) {
+        e.addEventListener("click", (e) => {
             console.log("DSA");
-            prod.count--;
-            console.log(prod.count);
+            let basket = JSON.parse(localStorage.getItem("basket"));
+            let prod_id = e.target.parentElement.parentElement.getAttribute("data-id");
+            for (const prod of basket) {
+                if (prod_id == prod.id) {
+                    if (prod.count >= 1) {
+                        prod.count++;
+                    }
+                    console.log(prod.count);
+                }
+            }
+
+            localStorage.setItem("basket", JSON.stringify(basket));
+            document.getElementsByClassName("main")[0].children[0].children[1].innerHTML = "";
+            location.reload();
+        });
+    }
+}
+
+document.getElementById("logo").addEventListener("click", () => {
+    window.open("index.html", "_self");
+    console.log("DS");
+});
+
+
+for (const delete_button of document.getElementsByClassName("delete-item")) {
+    delete_button.addEventListener("click", (e) => {
+        const prod_id = e.target.parentElement.parentElement.getAttribute("data-id");
+
+        let basket = JSON.parse(localStorage.getItem("basket"));
+        for (let prod of basket) {
+            if (prod.id == prod_id) {
+                localStorage.setItem("last_deleted", JSON.stringify(prod))
+                console.log("here")
+                break;
+            }
         }
+        basket = basket.filter(element => element.id != prod_id);
+        localStorage.setItem("basket", JSON.stringify(basket));
+        document.getElementsByClassName("main")[0].children[0].children[1].innerHTML = "";
+        location.reload();
+    });
+}
+
+if (localStorage.getItem("last_deleted") != null) {
+    document.getElementsByClassName("deleted")[0].innerHTML = `
+        <p> ${JSON.parse(localStorage.getItem("last_deleted")).name} has been deleted. <span id="undo"> Undo? </span> </p>
+    `
+    document.getElementsByClassName("deleted")[0].style.display = "block";
+    if (localStorage.getItem("last_deleted") != null) {
+        document.getElementById("undo").addEventListener("click", () => {
+            let basket = JSON.parse(localStorage.getItem("basket"));
+            let last_deleted = JSON.parse(localStorage.getItem("last_deleted"));
+            basket.push(last_deleted);
+            localStorage.setItem("basket", JSON.stringify(basket));
+            document.getElementsByClassName("main")[0].children[0].style.display = "block";
+            document.getElementsByClassName("main")[0].children[1].style.display = "block";
+            document.getElementsByClassName("main")[0].children[2].style.display = "none";
+            localStorage.removeItem("last_deleted");
+            location.reload();
+        });
+    }
+}
+
+let calculate_subtotal = () => {
+    let subtotal = 0;
+
+    const basket = JSON.parse(localStorage.getItem("basket"));
+
+    for (const e of basket) {
+        subtotal += e.price.slice(1) * e.count;
     }
 
-    localStorage.setItem("basket", JSON.stringify(basket));
-    document.getElementsByClassName("main")[0].children[0].children[1].innerHTML = "";
-    location.reload();
-});
+    document.getElementById("subtotal-number").innerHTML = "$" + parseFloat(subtotal).toFixed(2);
+}
+
+calculate_subtotal();
+
+let last_checked = document.getElementById("flat-rate");
+
+for (const delivery_choice of document.getElementsByClassName("delivery-choice")) {
+    delivery_choice.addEventListener("change", (e) => {
+        if (e.target == last_checked) {
+            e.target.checked = true;
+            return;
+        } else {
+            const subtotal = document.getElementById("total").innerHTML.slice(1);
+            if (e.target != document.getElementById("flat-rate") && last_checked == document.getElementById("flat-rate")) {
+                document.getElementById("total").innerHTML = "$" + (parseFloat(subtotal) - 5).toFixed(2);
+            } else if (e.target == document.getElementById("flat-rate")) {
+                document.getElementById("total").innerHTML = "$" + (parseFloat(subtotal) + 5).toFixed(2);
+            }
+
+            last_checked = e.target;
+        }
+
+        for (const d of document.getElementsByClassName("delivery-choice")) {
+            d.checked = false;
+        }
+        e.target.checked = true;
+    });
+}
+
+if (JSON.parse(localStorage.getItem("basket")).length > 0) {
+    const subtotal = document.getElementById("subtotal-number").innerHTML.slice(1);
+    document.getElementById("total").innerHTML = "$" + (parseFloat(subtotal) + 5).toFixed(2);
+    document.getElementsByClassName("main")[0].children[2].style.display = "none";
+} else {
+    document.getElementsByClassName("main")[0].children[0].style.display = "none";
+    document.getElementsByClassName("main")[0].children[1].style.display = "none";
+}

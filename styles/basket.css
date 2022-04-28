@@ -28,6 +28,10 @@ header {
   /* The Close Button */
 }
 
+header #logo {
+  cursor: pointer;
+}
+
 header .first {
   background-color: red;
   height: auto;
@@ -816,16 +820,76 @@ header .close:focus {
   font-size: 14px;
 }
 
+.decrease, .increase {
+  cursor: pointer;
+}
+
+.deleted {
+  width: 1230px;
+  display: none;
+  margin: auto;
+  padding: 20px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  margin-top: 50px;
+}
+
+.deleted span {
+  color: #2BBEF9;
+  cursor: pointer;
+}
+
 .main {
   width: 1230px;
   margin: auto;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 500px;
   margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+.main .empty {
+  -webkit-mask-position: relative;
+          mask-position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main .empty .empty-icon {
+  width: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main .empty a {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 200px;
+  display: block;
+  width: 170px;
+  height: 60px;
+  background-color: #4F61AA;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .main .left {
@@ -880,7 +944,155 @@ header .close:focus {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  width: 30%;
+  width: 25%;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.313);
+  border-radius: 5px;
+}
+
+.main .right .p1,
+.main .right .p2 {
+  width: 90%;
+  padding: 5%;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+}
+
+.main .right .p2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .right .p2 div {
+  padding-left: 5%;
+  width: 20%;
+}
+
+.main .right .p3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+}
+
+.main .right .p3 div {
+  width: 50%;
+}
+
+.main .right .p3 .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .right .p3 .left p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.main .right .p3 .right {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 12px;
+  border: none;
+}
+
+.main .right .p3 .right p {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-inline: 10%;
+  text-align: center;
+}
+
+.main .right .p4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.242);
+}
+
+.main .right .p4 .left, .main .right .p4 .right {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-inline: 5%;
+  font-weight: bold;
+}
+
+.main .right .p4 .right {
+  border: none;
+}
+
+.main .right .checkout {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .right .checkout input {
+  width: 90%;
+  height: 70%;
+  border: none;
+  margin: auto;
+  display: block;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: #F1456E;
+  color: white;
 }
 
 .cart-item {
@@ -955,6 +1167,30 @@ header .close:focus {
 
 .cart-item .subtotal {
   width: 15%;
+  position: relative;
+}
+
+.cart-item .subtotal .delete-item {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  color: white;
+  right: -1px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer {

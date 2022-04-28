@@ -83,3 +83,6 @@ $(document).ready(function () {
     });
 });
 
+document.getElementById("logo").addEventListener("click", () => {
+  window.open("index.html", "_self");
+});

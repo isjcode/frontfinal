@@ -1,6 +1,12 @@
-if (localStorage.getItem("basket") == null) {
-  localStorage.setItem("basket", JSON.stringify([]));
-}
+( () => {
+  if (JSON.parse(localStorage.getItem("basket")) == null) {
+    localStorage.setItem("basket", JSON.stringify([]));
+  }
+  console.log("SD");
+  document.getElementsByClassName("product-quantity")[0].innerHTML = JSON.parse(localStorage.getItem("basket")).length;
+})();
+
+
 
 // Get the modal
 let modal = document.getElementById("myModal");
@@ -197,7 +203,15 @@ for (let prod of document.getElementsByClassName("add")) {
       notification.style.display = "none";
     }, 3000);
 
-    document.getElementsByClassName("product-quantity")[0].innerHTML = basket.length;
-
   });
 }
+
+document.getElementsByClassName("cart-icon")[0].addEventListener("click", () => {
+  window.open("basket.html", "_self");
+});
+
+document.getElementById("logo").addEventListener("click", () => {
+  window.open("index.html", "_self");
+});
+
+

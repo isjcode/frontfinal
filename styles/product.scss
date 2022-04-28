@@ -25,6 +25,13 @@ a {
 header {
     min-width: 1600px;
 
+    #logo {
+        cursor: pointer;
+    }
+
+    .cart-icon {
+        cursor: pointer;
+    }
     .first {
         background-color: red;
         height: auto;

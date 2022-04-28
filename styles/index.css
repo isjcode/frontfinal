@@ -43,6 +43,14 @@ header {
   /* The Close Button */
 }
 
+header #logo {
+  cursor: pointer;
+}
+
+header .cart-icon {
+  cursor: pointer;
+}
+
 header .first {
   height: auto;
   color: white;
