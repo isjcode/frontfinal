@@ -1,3 +1,7 @@
+if (localStorage.getItem("basket") == null) {
+  localStorage.setItem("basket", JSON.stringify([]));
+}
+
 // Get the modal
 let modal = document.getElementById("myModal");
 
@@ -111,7 +115,7 @@ document.getElementById("close-mobile-modal-btn").addEventListener("click", () =
 });
 
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == document.getElementsByClassName("modal-bcg")[0]) {
     modal.style.display = "none";
     document.getElementsByClassName("mobile-modal-content")[0].style.display = "none";
@@ -143,6 +147,57 @@ $(document).ready(function () {
   });
 });
 
-$(window).on('resize orientationchange', function() {
+$(window).on('resize orientationchange', function () {
   $('.carousel').slick('resize');
 });
+
+
+
+for (let prod of document.getElementsByClassName("add")) {
+  prod.addEventListener("click", (e) => {
+    const elem = e.target.parentElement.parentElement;
+    const prod_id = elem.getAttribute("id");
+    const img_link = elem.children[1].src;
+    const prod_name = elem.children[2].innerHTML;
+    const prod_price = elem.children[5].innerText.split(" ")[1];
+    if (localStorage.getItem("basket") == null) {
+      localStorage.setItem("basket", JSON.stringify([]));
+    }
+
+    const basket = JSON.parse(localStorage.getItem("basket"));
+
+    let exists = false;
+    let notification = document.getElementById("product_added");
+    for (const prod of basket) {
+      if (prod.id == prod_id) {
+        prod.count++;
+        exists = true;
+        notification.innerText = `${prod.count} x ${prod.name} has been added to the cart.`
+      }
+      localStorage.setItem("basket", JSON.stringify(basket));
+
+    }
+
+    if (!exists) {
+      basket.push({
+        id: prod_id,
+        link: img_link,
+        name: prod_name,
+        count: 1,
+        price: prod_price
+      })
+      localStorage.setItem("basket", JSON.stringify(basket));
+      notification.innerText = `1 x ${prod_name} has been added to the cart.`
+    }
+
+
+    console.log(localStorage.getItem("basket"));
+    notification.style.display = "block";
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 3000);
+
+    document.getElementsByClassName("product-quantity")[0].innerHTML = basket.length;
+
+  });
+}

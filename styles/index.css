@@ -22,6 +22,21 @@ a {
   display: none;
 }
 
+#product_added {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  width: 300px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 7px;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
 header {
   min-width: 1600px;
   /* Modal Content/Box */
@@ -1252,6 +1267,7 @@ header .close:focus {
 }
 
 .second-products .right-p .right-pp .add input {
+  cursor: pointer;
   display: block;
   width: 80%;
   height: 40px;
