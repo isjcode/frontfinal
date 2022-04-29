@@ -820,7 +820,8 @@ header .close:focus {
   font-size: 14px;
 }
 
-.decrease, .increase {
+.decrease,
+.increase {
   cursor: pointer;
 }
 
@@ -1050,7 +1051,8 @@ header .close:focus {
   border-bottom: 1px solid rgba(0, 0, 0, 0.242);
 }
 
-.main .right .p4 .left, .main .right .p4 .right {
+.main .right .p4 .left,
+.main .right .p4 .right {
   width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1170,12 +1172,12 @@ header .close:focus {
   position: relative;
 }
 
-.cart-item .subtotal .delete-item {
+.cart-item .delete-item {
   width: 20px;
   height: 20px;
   position: absolute;
   color: white;
-  right: -1px;
+  right: 370px;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1832,20 +1834,27 @@ footer .container .newspaper div .btn {
     height: -moz-max-content;
     height: max-content;
   }
-  .main .left, .main .right {
+  .main .left,
+  .main .right {
     width: 100%;
   }
   .main .left .top {
     width: 100%;
   }
-  .main .left .p2, .main .left .p4 {
+  .main .left .p2,
+  .main .left .p4 {
     display: none;
   }
-  .main .left .p1, .main .left .p3 {
+  .main .left .p1,
+  .main .left .p3 {
     width: 50% !important;
   }
   .main .empty {
     width: 80%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    height: 500px;
   }
   .main .empty p {
     width: 100%;
@@ -1854,13 +1863,16 @@ footer .container .newspaper div .btn {
     height: min-content;
     padding-left: 10%;
   }
-  .cart-item .price, .cart-item .subtotal {
+  .cart-item .price,
+  .cart-item .subtotal {
     display: none;
   }
-  .cart-item .product, .cart-item .quantity {
+  .cart-item .product,
+  .cart-item .quantity {
     width: 50%;
   }
-  .cart-item .product img, .cart-item .product p {
+  .cart-item .product img,
+  .cart-item .product p {
     width: 50%;
   }
   .mobile-header,
@@ -1868,6 +1880,9 @@ footer .container .newspaper div .btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .delete-item {
+    left: 90%;
   }
   body {
     height: -webkit-max-content;

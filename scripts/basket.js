@@ -83,7 +83,9 @@ $(document).ready(function () {
     });
 });
 
-
+if (localStorage.getItem("basket") == null) {
+    localStorage.setItem("basket", JSON.stringify([]));
+}
 let basket = JSON.parse(localStorage.getItem("basket"));
 
 
@@ -107,8 +109,8 @@ let add_items = () => {
         </div>
         <div class="subtotal">
             ${subtotal.toFixed(2)}
-            <input class="delete-item" value="X" type="button">
         </div>
+        <input class="delete-item" value="X" type="button">
     </div>`;
 
         div.innerHTML = div_text;
@@ -171,7 +173,7 @@ document.getElementById("logo").addEventListener("click", () => {
 
 for (const delete_button of document.getElementsByClassName("delete-item")) {
     delete_button.addEventListener("click", (e) => {
-        const prod_id = e.target.parentElement.parentElement.getAttribute("data-id");
+        const prod_id = e.target.parentElement.getAttribute("data-id");
 
         let basket = JSON.parse(localStorage.getItem("basket"));
         for (let prod of basket) {
@@ -194,7 +196,8 @@ if (localStorage.getItem("last_deleted") != null) {
     `
     document.getElementsByClassName("deleted")[0].style.display = "block";
     if (localStorage.getItem("last_deleted") != null) {
-        document.getElementById("undo").addEventListener("click", () => {
+        document.getElementById("undo").addEventListener("click", (e) => {
+            console.log(e.target.parentElement.parentElement);
             let basket = JSON.parse(localStorage.getItem("basket"));
             let last_deleted = JSON.parse(localStorage.getItem("last_deleted"));
             basket.push(last_deleted);
