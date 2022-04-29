@@ -1510,6 +1510,57 @@ footer {
         height: 4000px;
     }
 
+    .deleted {
+        width: auto;
+        height: auto;
+
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: max-content;
+        .left, .right {
+            width: 100%;
+        }
+
+        .left {
+            .top {
+                width: 100%;
+            }
+            .p2, .p4 {
+                display: none;
+            }
+            .p1, .p3 {
+                width: 50% !important;
+            }
+        }
+        .empty {
+            width: 80%;
+            p {
+                width: 100%;
+                height: min-content;
+                padding-left: 10%;
+            }
+        }
+    }
+
+    .cart-item {
+        .price, .subtotal {
+            display: none;
+        }
+
+        .product, .quantity {
+            width: 50%;
+        }
+
+        .product {
+            img, p {
+                width: 50%;
+            }
+        }
+    }
 
 
 
