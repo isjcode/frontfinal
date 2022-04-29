@@ -181,7 +181,6 @@ for (let prod of document.getElementsByClassName("add")) {
         notification.innerText = `${prod.count} x ${prod.name} has been added to the cart.`
       }
       localStorage.setItem("basket", JSON.stringify(basket));
-
     }
 
     if (!exists) {

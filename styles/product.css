@@ -1877,7 +1877,13 @@ footer .container .newspaper div .btn {
     font-size: 18px;
   }
   .wrapper .top .third {
-    display: none;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15%;
   }
   .wrapper .top .first {
     text-align: center;
@@ -1898,6 +1904,27 @@ footer .container .newspaper div .btn {
   }
   .wrapper .top .second .wishlist {
     font-size: 12px;
+  }
+  .description {
+    width: 100%;
+  }
+  .related {
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+  }
+  .products {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    margin-top: 10%;
+  }
+  .products .right-pp {
+    width: 50%;
+    text-align: center;
   }
   body {
     height: -webkit-max-content;

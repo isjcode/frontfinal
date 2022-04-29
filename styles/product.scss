@@ -1609,7 +1609,10 @@ footer {
                 font-size: 18px;
             }
             .third {
-                display: none;
+                display: flex !important;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-top: 15%;
             }
 
             .first {
@@ -1636,6 +1639,26 @@ footer {
         }
     }
 
+    .description {
+        width: 100%;
+    }
+
+    .related {
+        width: 80%;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .products {
+        flex-wrap: wrap;
+        height: max-content;
+        width: 100%;
+        margin-top: 10%;
+        .right-pp {
+            width: 50%;
+            text-align: center;
+        }
+    }
     body {
         height: max-content;
     }
