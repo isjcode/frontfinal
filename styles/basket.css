@@ -1991,4 +1991,12 @@ footer .container .newspaper div .btn {
     width: 100%;
   }
 }
+
+.fa-user {
+  cursor: pointer;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
 /*# sourceMappingURL=basket.css.map */

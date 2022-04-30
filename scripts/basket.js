@@ -290,3 +290,19 @@ if (JSON.parse(localStorage.getItem("basket")).length > 0) {
     document.getElementsByClassName("main")[0].children[0].style.display = "none";
     document.getElementsByClassName("main")[0].children[1].style.display = "none";
 }
+
+document.getElementById("logo").addEventListener("click", () => {
+  window.open("index.html", "_self");
+});
+
+document.getElementsByClassName("cart-icon")[0].addEventListener("click", () => {
+  window.open("basket.html");
+});
+
+document.getElementsByClassName("fa-user")[0].addEventListener("click", () => {
+  window.open("login.html", "_self");
+});
+
+document.getElementsByClassName("contact")[0].addEventListener("click", () => {
+  window.open("contact.html", "_self");
+});

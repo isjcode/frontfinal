@@ -1723,4 +1723,12 @@ footer .container .newspaper div .btn {
     width: 100%;
   }
 }
+
+.fa-user {
+  cursor: pointer;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
 /*# sourceMappingURL=contact.css.map */

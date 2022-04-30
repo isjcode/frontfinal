@@ -1067,6 +1067,7 @@ header .right .close:focus {
 }
 
 .middle .right .prodducts .right-pp {
+  cursor: pointer;
   width: 25%;
   height: 50%;
   position: relative;
@@ -1230,6 +1231,7 @@ header .right .close:focus {
   margin: auto;
   margin-top: 20px;
   z-index: -1;
+  display: none;
 }
 
 .mobile-pic img {
@@ -2105,6 +2107,9 @@ footer .container .newspaper div .btn {
     display: -ms-flexbox !important;
     display: flex !important;
   }
+  .mobile-pic {
+    display: block;
+  }
   body {
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -2190,9 +2195,7 @@ footer .container .newspaper div .btn {
     display: -ms-flexbox;
     display: flex;
     width: 50%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    height: 400px;
     margin-bottom: 20px;
   }
   .middle .right .prodducts .right-pp .img {
@@ -2204,14 +2207,21 @@ footer .container .newspaper div .btn {
   }
   .middle .right .prodducts .right-pp .img .add {
     display: block;
-    position: relative;
+    position: absolute;
     padding: 0;
-    top: unset;
-    margin-top: 20px;
+    top: 150%;
   }
   .middle .right .prodducts .right-pp .img img {
     width: 100%;
     margin-top: 50px;
   }
+}
+
+.fa-user {
+  cursor: pointer;
+}
+
+.cart-icon {
+  cursor: pointer;
 }
 /*# sourceMappingURL=shop-wide.css.map */

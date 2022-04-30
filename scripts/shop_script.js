@@ -56,7 +56,7 @@ document.getElementById("close-mobile-modal-btn").addEventListener("click", () =
 });
 
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == document.getElementsByClassName("modal-bcg")[0]) {
     modal.style.display = "none";
     document.getElementsByClassName("mobile-modal-content")[0].style.display = "none";
@@ -113,17 +113,7 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $(".mobile-category-btn").click(function () {
-    $(".mobile-categories").slideToggle("fast")
-  });
-});
 
-$(document).ready(function () {
-  $(".mobile-fruits").click(function () {
-    $("#lol").slideToggle("fast")
-  });
-});
 
 $(document).ready(function () {
   $(".mobile-home").click(function () {
@@ -166,11 +156,34 @@ window.onclick = function (event) {
 
 
 document.getElementsByClassName("filter")[0].addEventListener("click", () => {
-    document.getElementsByClassName("mobile-filter")[0].style.visibility = "visible";
-    document.getElementsByClassName("mobile-filter")[0].style.width = "100%";
+  document.getElementsByClassName("mobile-filter")[0].style.visibility = "visible";
+  document.getElementsByClassName("mobile-filter")[0].style.width = "100%";
 });
 
 document.getElementById("close-mobile-filter").addEventListener("click", () => {
-    document.getElementsByClassName("mobile-filter")[0].style.visibility = "hidden";
-    document.getElementsByClassName("mobile-filter")[0].style.width = "0";
+  document.getElementsByClassName("mobile-filter")[0].style.visibility = "hidden";
+  document.getElementsByClassName("mobile-filter")[0].style.width = "0";
+});
+
+for (const prod of document.getElementsByClassName("right-pp")) {
+  prod.addEventListener("click", () => {
+    window.open("product.html", "_self");
+  });
+}
+
+
+document.getElementById("logo").addEventListener("click", () => {
+  window.open("index.html", "_self");
+});
+
+document.getElementsByClassName("cart-icon")[0].addEventListener("click", () => {
+  window.open("basket.html");
+});
+
+document.getElementsByClassName("fa-user")[0].addEventListener("click", () => {
+  window.open("login.html", "_self");
+});
+
+document.getElementsByClassName("contact")[0].addEventListener("click", () => {
+  window.open("contact.html", "_self");
 });

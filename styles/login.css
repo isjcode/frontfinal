@@ -1564,11 +1564,16 @@ footer .container .newspaper div .btn {
     height: 4000px;
   }
   .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .main .login, .main .registration {
-    width: 100vw;
+    margin: auto;
+    width: 90%;
     margin-bottom: 30px;
     padding: 1%;
   }
@@ -1639,5 +1644,13 @@ footer .container .newspaper div .btn {
   footer .copyright {
     width: 100%;
   }
+}
+
+.fa-user {
+  cursor: pointer;
+}
+
+.cart-icon {
+  cursor: pointer;
 }
 /*# sourceMappingURL=login.css.map */

@@ -191,6 +191,7 @@ $(window).on('resize orientationchange', function () {
 
 for (let prod of document.getElementsByClassName("add")) {
   prod.addEventListener("click", (e) => {
+    e.stopPropagation();
     const elem = e.target.parentElement.parentElement;
     const prod_id = elem.getAttribute("id");
     const img_link = elem.children[1].src;
@@ -243,3 +244,29 @@ document.getElementById("logo").addEventListener("click", () => {
   window.open("index.html", "_self");
 });
 
+const products = ["r-product", "left-product", "right-pp", "left-p", "imgg", "right-pp"];
+
+
+for (const cl of products) {
+  for (const prod of document.getElementsByClassName(cl)) {
+  prod.addEventListener("click", () => {
+    window.open("product.html", "_self");
+  });
+}
+}
+
+document.getElementById("logo").addEventListener("click", () => {
+  window.open("index.html", "_self");
+});
+
+document.getElementsByClassName("cart-icon")[0].addEventListener("click", () => {
+  window.open("basket.html");
+});
+
+document.getElementsByClassName("fa-user")[0].addEventListener("click", () => {
+  window.open("login.html", "_self");
+});
+
+document.getElementsByClassName("contact")[0].addEventListener("click", () => {
+  window.open("contact.html", "_self");
+});

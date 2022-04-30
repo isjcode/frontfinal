@@ -7,7 +7,11 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+}
+
+.all-wrapper {
+    overflow: hidden;
 }
 
 li {
@@ -843,6 +847,7 @@ header {
         flex-wrap: wrap;
 
         .r-product {
+            cursor: pointer;
             padding-bottom: 5px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             width: 25%;
@@ -878,6 +883,7 @@ header {
     display: flex;
 
     .left-p {
+        cursor: pointer;
         height: 100%;
         width: 30%;
         border: 1px solid red;
@@ -1005,6 +1011,7 @@ header {
     }
 
     .right-p {
+        cursor: pointer;
         width: 68%;
         margin-left: 2%;
         height: 100%;
@@ -1249,6 +1256,7 @@ header {
     margin-top: 50px;
 
     .imgg {
+        cursor: pointer;
         height: 100%;
         width: 20%;
         border-radius: 8px;
@@ -1489,11 +1497,11 @@ header {
                 border-radius: 20px;
                 color: white;
             }
-
-            padding-bottom: 20px;
+            padding-top: 10px;
             z-index: 10000000;
             display: none;
-            top: 300px;
+            top: 295px;
+            padding-bottom: 10px;
 
         }
 
@@ -2236,15 +2244,28 @@ footer {
 
         .right-p {
             width: 100%;
-
+            height: max-content;
             .right-pp {
                 width: 50%;
                 margin: auto;
+                height: 400px;
+                .img {
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    .name {
+                        min-height: 60px;
+                    }
+                    
+                }
 
                 .add {
-                    display: block;
-                    position: unset;
-                    margin-top: 20px;
+                    display: unset;
+                    top: 145%;
+                    padding: unset;
+
                 }
             }
         }
@@ -2352,7 +2373,6 @@ footer {
 
     footer {
         width: 100%;
-
         .container {
             .newspaper {
                 width: 90%;
@@ -2407,4 +2427,12 @@ footer {
             width: 100%;
         }
     }
+}
+
+.fa-user {
+    cursor: pointer;
+}
+
+.cart-icon {
+    cursor: pointer;
 }

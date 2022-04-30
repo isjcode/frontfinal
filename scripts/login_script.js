@@ -138,3 +138,19 @@ document.getElementById("register-email").addEventListener("input", (e) => {
         document.getElementById("output").innerHTML = "";
     }
 });
+
+document.getElementById("logo").addEventListener("click", () => {
+  window.open("index.html", "_self");
+});
+
+document.getElementsByClassName("cart-icon")[0].addEventListener("click", () => {
+  window.open("basket.html");
+});
+
+document.getElementsByClassName("fa-user")[0].addEventListener("click", () => {
+  window.open("login.html", "_self");
+});
+
+document.getElementsByClassName("contact")[0].addEventListener("click", () => {
+  window.open("contact.html", "_self");
+});

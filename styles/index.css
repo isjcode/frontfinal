@@ -7,7 +7,11 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+}
+
+.all-wrapper {
+  overflow: hidden;
 }
 
 li {
@@ -964,6 +968,7 @@ header .close:focus {
 }
 
 .first-products .right-products .r-product {
+  cursor: pointer;
   padding-bottom: 5px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -1008,6 +1013,7 @@ header .close:focus {
 }
 
 .second-products .left-p {
+  cursor: pointer;
   height: 100%;
   width: 30%;
   border: 1px solid red;
@@ -1147,6 +1153,7 @@ header .close:focus {
 }
 
 .second-products .right-p {
+  cursor: pointer;
   width: 68%;
   margin-left: 2%;
   height: 100%;
@@ -1413,6 +1420,7 @@ header .close:focus {
 }
 
 .slider_products11 .imgg {
+  cursor: pointer;
   height: 100%;
   width: 20%;
   border-radius: 8px;
@@ -1654,10 +1662,11 @@ header .close:focus {
   width: 100%;
   background-color: white;
   position: absolute;
-  padding-bottom: 20px;
+  padding-top: 10px;
   z-index: 10000000;
   display: none;
-  top: 300px;
+  top: 295px;
+  padding-bottom: 10px;
 }
 
 .prodducts .right-pp .add input {
@@ -2507,15 +2516,27 @@ footer .container .newspaper div .btn {
   }
   .second-products .right-p {
     width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
   .second-products .right-p .right-pp {
     width: 50%;
     margin: auto;
+    height: 400px;
+  }
+  .second-products .right-p .right-pp .img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .second-products .right-p .right-pp .img .name {
+    min-height: 60px;
   }
   .second-products .right-p .right-pp .add {
-    display: block;
-    position: unset;
-    margin-top: 20px;
+    display: unset;
+    top: 145%;
+    padding: unset;
   }
   .discounts {
     -ms-flex-wrap: wrap;
@@ -2652,5 +2673,13 @@ footer .container .newspaper div .btn {
   footer .copyright {
     width: 100%;
   }
+}
+
+.fa-user {
+  cursor: pointer;
+}
+
+.cart-icon {
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */
