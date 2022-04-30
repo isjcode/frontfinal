@@ -702,7 +702,8 @@ header {
     width: 1230px;
     height: max-content;
     margin: auto;
-    display: flex; 
+    display: flex;
+
     input {
         width: 80%;
         height: 50px;
@@ -712,14 +713,17 @@ header {
         padding-left: 5%;
     }
 
-    .login, .registration {
+    .login,
+    .registration {
         width: 50%;
         margin-top: 50px;
+
         .p1 {
             margin-bottom: 20px;
             color: rgba(0, 0, 0, 0.486);
             font-weight: 400;
         }
+
         .p2 {
             margin-bottom: 15px;
             font-size: 14px;
@@ -736,6 +740,7 @@ header {
                 height: unset;
                 margin-right: 20px;
             }
+
             font-size: 14px;
         }
 
@@ -743,6 +748,7 @@ header {
             font-size: 14px;
             line-height: 20px;
             margin-bottom: 10px;
+
             span {
                 color: #FF0000;
                 text-decoration: underline;
@@ -965,6 +971,8 @@ footer {
     align-items: center;
     text-align: center;
     background-color: white !important;
+    z-index: 999999999999999999999999999999999999999999999999999999;
+
 
     i,
     img {
@@ -978,7 +986,7 @@ footer {
         height: auto;
     }
 
-     .left-menu {
+    .left-menu {
         width: 100%;
         height: 100%;
         position: fixed;
@@ -1015,10 +1023,12 @@ footer {
             text-align: left;
             background-color: white;
             display: none;
+
             ul {
                 background-color: white;
                 display: none;
             }
+
             li {
                 padding-left: 30px;
                 margin-top: 10px;
@@ -1304,6 +1314,55 @@ footer {
     align-items: center;
     z-index: 2414214124124129999421949129412;
 
+    .mobile-search {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        padding-top: 20px;
+        top: -100%;
+        left: 0;
+        background-color: white;
+        display: none;
+
+        .search-bar {
+            width: 90%;
+            background-color: rgba(128, 128, 128, 0.178);
+            height: 70%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            border-radius: 7px;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+
+                input {
+                    border: none;
+                    background-color: transparent;
+
+                }
+            }
+
+            .div1 {
+                width: 80%;
+            }
+
+            .div2 {
+                margin: 0;
+                width: 20%;
+
+                i {
+                    font-size: 20px;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
     div {
         width: 20%;
         display: flex;
@@ -1343,48 +1402,53 @@ footer {
     .main {
         display: flex;
         width: 100%;
-        .login, .registration{
+
+        .login,
+        .registration {
             margin: auto;
             width: 90%;
             margin-bottom: 30px;
             padding: 1%;
+
             input {
                 width: 90%
             }
         }
+
         flex-wrap: wrap;
     }
-    
+
 
     .mobile-header,
     .mobile-bottom {
         display: flex;
     }
 
-  
 
-   
 
-    
 
-  
+
+
+
+
 
     body {
         height: max-content;
     }
 
-   
 
 
- 
 
-  
 
-   
+
+
+
+
 
     footer {
         width: 100%;
         height: max-content;
+
         .container {
             .newspaper {
                 width: 90%;

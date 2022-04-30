@@ -154,3 +154,24 @@ document.getElementsByClassName("fa-user")[0].addEventListener("click", () => {
 document.getElementsByClassName("contact")[0].addEventListener("click", () => {
   window.open("contact.html", "_self");
 });
+
+document.getElementsByClassName("mobile-search-btn")[0].addEventListener("click", () => {
+  let display = getComputedStyle(document.getElementsByClassName("mobile-search")[0]).display;
+
+  if (display == "none") {
+    document.getElementsByClassName("mobile-search")[0].style.display = "block";
+  }
+  else {
+    document.getElementsByClassName("mobile-search")[0].style.display = "none";
+  }
+});
+
+document.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    document.getElementsByClassName("mobile-header")[0].style.position = "fixed";
+    document.getElementsByClassName("mobile-header")[0].style.top = "0";
+  }
+  else {
+    document.getElementsByClassName("mobile-header")[0].style.position = "unset";
+  }
+});

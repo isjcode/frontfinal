@@ -1436,7 +1436,6 @@ footer {
     text-align: center;
     background-color: white !important;
     z-index: 999999999999999999999999999999999999;
-    // position: fixed;
 
     i,
     img {
@@ -1778,6 +1777,55 @@ footer {
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.185);
     z-index: 421421412421412241242141242412;
+
+    .mobile-search {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        padding-top: 20px;
+        top: -100%;
+        left: 0;
+        background-color: white;
+        display: none;
+
+        .search-bar {
+            width: 90%;
+            background-color: rgba(128, 128, 128, 0.178);
+            height: 70%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            border-radius: 7px;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+
+                input {
+                    border: none;
+                    background-color: transparent;
+
+                }
+            }
+
+            .div1 {
+                width: 80%;
+            }
+
+            .div2 {
+                margin: 0;
+                width: 20%;
+
+                i {
+                    font-size: 20px;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
 
     div {
         width: 20%;

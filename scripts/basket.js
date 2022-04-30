@@ -71,47 +71,47 @@ window.onclick = function (event) {
 // });
 
 $(document).ready(function () {
-  $(".mobile-category-btn").click(function () {
-    $(".mobile-categories").slideToggle("fast")
-  });
+    $(".mobile-category-btn").click(function () {
+        $(".mobile-categories").slideToggle("fast")
+    });
 });
 
 $(document).ready(function () {
-  $(".mobile-fruits").click(function () {
-    $("#lol").slideToggle("fast")
-  });
+    $(".mobile-fruits").click(function () {
+        $("#lol").slideToggle("fast")
+    });
 });
 
 $(document).ready(function () {
-  $(".mobile-home").click(function () {
-    $(".mobile-homes").slideToggle("fast")
-  });
+    $(".mobile-home").click(function () {
+        $(".mobile-homes").slideToggle("fast")
+    });
 });
 $(document).ready(function () {
-  $(".mobile-shop").click(function () {
-    $(".mobile-shops").slideToggle("fast")
-  });
+    $(".mobile-shop").click(function () {
+        $(".mobile-shops").slideToggle("fast")
+    });
 });
 
 $(document).ready(function () {
-  $(".shop-list1").click(function () {
-    $(".shop-lists1").slideToggle("fast")
-  });
+    $(".shop-list1").click(function () {
+        $(".shop-lists1").slideToggle("fast")
+    });
 });
 $(document).ready(function () {
-  $(".shop-list4").click(function () {
-    $(".shop-lists4").slideToggle("fast")
-  });
+    $(".shop-list4").click(function () {
+        $(".shop-lists4").slideToggle("fast")
+    });
 });
 $(document).ready(function () {
-  $(".shop-list3").click(function () {
-    $(".shop-lists3").slideToggle("fast")
-  });
+    $(".shop-list3").click(function () {
+        $(".shop-lists3").slideToggle("fast")
+    });
 });
 $(document).ready(function () {
-  $(".shop-list2").click(function () {
-    $(".shop-lists2").slideToggle("fast")
-  });
+    $(".shop-list2").click(function () {
+        $(".shop-lists2").slideToggle("fast")
+    });
 });
 
 
@@ -292,17 +292,27 @@ if (JSON.parse(localStorage.getItem("basket")).length > 0) {
 }
 
 document.getElementById("logo").addEventListener("click", () => {
-  window.open("index.html", "_self");
+    window.open("index.html", "_self");
 });
 
 document.getElementsByClassName("cart-icon")[0].addEventListener("click", () => {
-  window.open("basket.html");
+    window.open("basket.html");
 });
 
 document.getElementsByClassName("fa-user")[0].addEventListener("click", () => {
-  window.open("login.html", "_self");
+    window.open("login.html", "_self");
 });
 
 document.getElementsByClassName("contact")[0].addEventListener("click", () => {
-  window.open("contact.html", "_self");
+    window.open("contact.html", "_self");
+});
+
+document.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+        document.getElementsByClassName("mobile-header")[0].style.position = "fixed";
+        document.getElementsByClassName("mobile-header")[0].style.top = "0";
+
+    } else {
+        document.getElementsByClassName("mobile-header")[0].style.position = "unset";
+    }
 });

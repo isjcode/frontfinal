@@ -2041,6 +2041,7 @@ footer .container .newspaper div .btn {
           align-items: center;
   text-align: center;
   background-color: white !important;
+  z-index: 999999999999999999999999999999999999999999999999999999;
 }
 
 .mobile-header i,
@@ -2436,6 +2437,64 @@ footer .container .newspaper div .btn {
   font-size: 10px;
 }
 
+.mobile-bottom .mobile-search {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  top: -100%;
+  left: 0;
+  background-color: white;
+  display: none;
+}
+
+.mobile-bottom .mobile-search .search-bar {
+  width: 90%;
+  background-color: rgba(128, 128, 128, 0.178);
+  height: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7px;
+}
+
+.mobile-bottom .mobile-search .search-bar div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.mobile-bottom .mobile-search .search-bar div input {
+  border: none;
+  background-color: transparent;
+}
+
+.mobile-bottom .mobile-search .search-bar .div1 {
+  width: 80%;
+}
+
+.mobile-bottom .mobile-search .search-bar .div2 {
+  margin: 0;
+  width: 20%;
+}
+
+.mobile-bottom .mobile-search .search-bar .div2 i {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
 @media (max-width: 600px) {
   header .first,
   header .container,
@@ -2681,5 +2740,9 @@ footer .container .newspaper div .btn {
 
 .cart-icon {
   cursor: pointer;
+}
+
+.slick-arrow {
+  display: none !important;
 }
 /*# sourceMappingURL=index.css.map */
