@@ -71,17 +71,49 @@ window.onclick = function (event) {
 // });
 
 $(document).ready(function () {
-    $(".mobile-category-btn").click(function () {
-        $(".mobile-categories").slideToggle("fast")
-    });
+  $(".mobile-category-btn").click(function () {
+    $(".mobile-categories").slideToggle("fast")
+  });
 });
-
 
 $(document).ready(function () {
-    $(".mobile-home").click(function () {
-        $(".mobile-homes").slideToggle("fast")
-    });
+  $(".mobile-fruits").click(function () {
+    $("#lol").slideToggle("fast")
+  });
 });
+
+$(document).ready(function () {
+  $(".mobile-home").click(function () {
+    $(".mobile-homes").slideToggle("fast")
+  });
+});
+$(document).ready(function () {
+  $(".mobile-shop").click(function () {
+    $(".mobile-shops").slideToggle("fast")
+  });
+});
+
+$(document).ready(function () {
+  $(".shop-list1").click(function () {
+    $(".shop-lists1").slideToggle("fast")
+  });
+});
+$(document).ready(function () {
+  $(".shop-list4").click(function () {
+    $(".shop-lists4").slideToggle("fast")
+  });
+});
+$(document).ready(function () {
+  $(".shop-list3").click(function () {
+    $(".shop-lists3").slideToggle("fast")
+  });
+});
+$(document).ready(function () {
+  $(".shop-list2").click(function () {
+    $(".shop-lists2").slideToggle("fast")
+  });
+});
+
 
 document.getElementById("register-password").addEventListener("input", (e) => {
     if (document.getElementById("register-password").value.length < 6) {
